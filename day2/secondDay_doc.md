@@ -156,9 +156,9 @@ The new output shows:
 
 ### Discussion
 
-- **Binary Rounding:** Binary storage truncates fractions, creating minor errors (e.g., `0.1+0.2 != 0.3`). Fix this by using `np.isclose()`.
-- **Absolute vs. Relative:** Absolute error finds raw distance (\(\vert\text{True}-\text{Approx}\vert\)); relative error scales it to reveal percentage significance.
-- **Catastrophic Cancellation:** At `x=1e-16`, subtracting almost identical floating-point numbers in the numerator of the `direct` formula drops the structural precision to zero. Rewriting the algebraic expression into an addition-based, stable fractional form completely eliminates this subtraction step, preserving accurate outputs down to `1e-16`.
+- Binary storage truncates fractions, creating minor errors. Fixed by using `np.isclose()`.
+- Absolute error finds raw distance; relative error scales it to reveal percentage significance.
+- At `x=1e-16`, subtracting almost identical floating-point numbers in the numerator of the `direct` formula drops the structural precision to zero. Rewriting the algebraic expression into an addition-based, stable fractional form completely eliminates this subtraction step, preserving accurate outputs down to `1e-16`.
 
 ---
 
