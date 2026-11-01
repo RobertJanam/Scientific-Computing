@@ -18,3 +18,4 @@ print(
     f"Difference between estimates: "
     f"{abs(energy_simpson-energy_trapezoid):.3f} kWh"
 )
+    
